@@ -78,7 +78,7 @@ while true; do
     Mandatory arguments to long options are mandatory for short options too.
     
     -c, --community
-        choose from ffhh, ffhl, ffki
+        choose from ffhh, ffhl, ffki, ffffm
         edit the options in the COMMUNITY section of this script to connect to another network
     -i, --interface
         interface that should be used for mesh
@@ -194,6 +194,13 @@ if [ "$COMMUNITY" == "ffki" ]; then
   NODELINK=http://freifunk.in-kiel.de/ffmap/nodes.html
   #optional for faster connect:
   NAMESERVER=fda1:384a:74de:4242::1
+fi
+
+if [ "$COMMUNITY" == "ffffm" ]; then
+  ESSID=ffm.freifunk.net
+  CHANNEL=1
+  CELLID=02:d1:11:37:fd:42
+  NODELINK=https://map.ffm.freifunk.net/
 fi
 ##########################################
 
